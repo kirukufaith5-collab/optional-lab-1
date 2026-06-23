@@ -7,14 +7,14 @@ existing_models = ['Beedle', 'Crossroads', 'M2', 'Panique']
 
 @app.route("/")
 def welcome ():
-    return "<h1> Welcome to Flatiron Cars </h1>"
+    return "Welcome to Flatiron Cars "
 
 @app.route("/<model>")
 def module(model):
     if model in existing_models:
-        return f"<h2>Flatiron {model} is in our fleet!</h2>"
+        return f"Flatiron {model} is in our fleet!"
     else:
-        return f"<h2>No Model {model} exists in our catalog.</h2>"
+        return f"No Model {model} exists in our catalog."
 
 if __name__ == '__main__':
     app.run(debug=True)
